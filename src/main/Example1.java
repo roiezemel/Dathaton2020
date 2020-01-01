@@ -4,6 +4,7 @@ import android_components.AndroidButton;
 import components.ActionListener;
 import components.Button;
 import components.Component;
+import components.Text;
 import containers.Panel;
 import containers.Window;
 import shapes.Oval;
@@ -17,18 +18,8 @@ public class Example1 extends Panel implements ActionListener {
 
     public Example1() {
 
-        AndroidButton button = new AndroidButton(this);
-        button.setText("Click Me!");
-        button.setShape(new RoundRectangle());
-        button.setBounds(46, 481, 100, 30);
-        add(button);
-
-        AndroidButton orangeButton = new AndroidButton(this);
-        orangeButton.setText("I'm Orange!");
-        orangeButton.setColor(Color.orange);
-        orangeButton.setBounds(150, 481, 100, 30);
-        orangeButton.setShape(new RoundRectangle());
-        add(orangeButton);
+        Text text = new Text("Hello World!", this);
+        add(text);
 
         Window window = new Window("Example");
         window.setSize(600, 600);

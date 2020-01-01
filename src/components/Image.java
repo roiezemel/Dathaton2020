@@ -84,7 +84,7 @@ public class Image extends Component {
                 g2d.drawString(getText(), x, y);
 
                 // Selected
-                if (this == Component.selected && showSelected) {
+                if (this == selected && showSelected) {
                     g2d.setStroke(new BasicStroke(1));
                     g2d.setColor(Color.lightGray);
                     g2d.drawRect(x - 1, y - fm.getAscent() - 1, (int) r.getWidth() + 1, (int) r.getHeight() + 1);

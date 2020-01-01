@@ -4,12 +4,15 @@ import android_components.AndroidButton;
 import components.ActionListener;
 import components.Component;
 import components.Image;
+import components.Text;
 import containers.Panel;
 import containers.Window;
 
 import java.awt.*;
 
 public class Main extends Panel implements ActionListener {
+
+    Text text;
 
     public Main() {
 
@@ -39,7 +42,10 @@ public class Main extends Panel implements ActionListener {
         back.setBounds(257, 154, 100, 50);
         add(back);
 
-
+        text = new Text("Is your character male?", this);
+        text.setFont(new Font("Ariel", Font.BOLD, 20));
+        text.setBounds(155, 54, 100, 50);
+        add(text);
 
         Window window = new Window("Test JGameV2");
         window.setSize(400, 600);

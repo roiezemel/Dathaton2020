@@ -30,7 +30,7 @@ public abstract class Component implements MouseMotionListener, MouseListener, K
     private boolean blurredBorder = true;
     private boolean mouseOver = false;
     private boolean onDrag = false;
-    protected static boolean showSelected = true;
+    protected boolean showSelected = true;
 
     public Component() {
         this.bgColor = new Color[] {Color.WHITE, new Color(241, 241, 255)};
@@ -109,8 +109,8 @@ public abstract class Component implements MouseMotionListener, MouseListener, K
         this.actionListeners.add(actionListener);
     }
 
-    public static void showSelected(boolean showSelected) {
-        Component.showSelected = showSelected;
+    public void showSelected(boolean showSelected) {
+        this.showSelected = showSelected;
     }
 
     protected java.awt.Rectangle getAwtRect(){
