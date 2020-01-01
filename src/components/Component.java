@@ -1,6 +1,5 @@
 package components;
 
-import containers.Panel;
 import java.awt.*;
 import shapes.Rectangle;
 import shapes.RoundRectangle;
@@ -17,7 +16,7 @@ public abstract class Component implements MouseMotionListener, MouseListener, K
     LinkedList<ActionListener> actionListeners = new LinkedList<>();
     private boolean dragAble = false;
     private boolean visible = true;
-    private static Component selected = null;
+    public static Component selected = null;
 
     //  Graphics
     private Color[] bgColor;
@@ -31,7 +30,7 @@ public abstract class Component implements MouseMotionListener, MouseListener, K
     private boolean blurredBorder = true;
     private boolean mouseOver = false;
     private boolean onDrag = false;
-    private static boolean showSelected = true;
+    protected static boolean showSelected = true;
 
     public Component() {
         this.bgColor = new Color[] {Color.WHITE, new Color(241, 241, 255)};

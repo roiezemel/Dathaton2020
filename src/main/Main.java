@@ -2,13 +2,11 @@ package main;
 
 import android_components.AndroidButton;
 import components.ActionListener;
-import components.Button;
 import components.Component;
+import components.Image;
 import containers.Panel;
 import containers.Window;
-import shapes.Oval;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class Main extends Panel implements ActionListener {
@@ -32,6 +30,16 @@ public class Main extends Panel implements ActionListener {
         button2.setBounds(-13, 362, 200, 200);
         button2.setText("YES");
         add(button2);
+
+        Image textBubble = new Image("text.png", this, this);
+        textBubble.setBounds(7, 32, 350, 100);
+        add(textBubble);
+
+        Image back = new Image("back.png", this, this);
+        back.setBounds(257, 154, 100, 50);
+        add(back);
+
+
 
         Window window = new Window("Test JGameV2");
         window.setSize(400, 600);
