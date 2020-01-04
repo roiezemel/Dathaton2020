@@ -16,13 +16,27 @@ import java.awt.*;
 
 public class Example1 extends Panel implements ActionListener {
 
+    Text text;
+    String full = "Roie is the King";
+    int index = 1;
+    AndroidButton button;
+
     public Example1() {
 
-        Text text = new Text("Hello World!", this);
+        setBackgroundColor(new Color(0, 120, 0));
+
+        text = new Text("R", this);
+        text.setTextColor(Color.ORANGE);
+        text.setBounds(119, 248, 100, 50);
         add(text);
 
+        button = new AndroidButton(this);
+        button.setText("Click Here");
+        button.setBounds(116, 298, 100, 30);
+        add(button);
+
         Window window = new Window("Example");
-        window.setSize(600, 600);
+        window.setSize(350, 600);
         window.appear();
         window.add(this);
 
@@ -41,6 +55,10 @@ public class Example1 extends Panel implements ActionListener {
 
     @Override
     public void onPress(Component component) {
+        text.setText(text.getText() + full.charAt(index));
+        index++;
+        if (index == full.length())
+            index = 0;
         repaint();
     }
 
