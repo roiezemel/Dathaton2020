@@ -20,6 +20,7 @@ public class Predefining {
 
     /**
      * Calculates the fitness of a timetable. The higher the value, the better the timetable.
+     * Very important: the program should update the fitness value of the Timetable object.
      * @param timetable
      * @return A value between 0 and 1 determines the fitness of the given timetable.
      */

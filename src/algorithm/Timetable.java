@@ -108,4 +108,10 @@ public class Timetable {
     public void setFitness(int fitness) {
         this.fitness = fitness;
     }
+
+    public Timetable copy() {
+        Timetable timetable = new Timetable(this.timetable);
+        timetable.setFitness(this.fitness);
+        return timetable;
+    }
 }
